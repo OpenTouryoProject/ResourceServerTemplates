@@ -19,7 +19,7 @@ rem --------------------------------------------------
 rem Batch build of ASPNETWebService.
 rem --------------------------------------------------
 nuget.exe restore "ASPNETWebService\ASPNETWebService.sln"
-%BUILDFILEPATH% %COMMANDLINE% "ASPNETWebService\ASPNETWebService.sln"
+%BUILDFILEPATH% %COMMANDLINE% /t:Restore "ASPNETWebService\ASPNETWebService.sln"
 
 pause
 
