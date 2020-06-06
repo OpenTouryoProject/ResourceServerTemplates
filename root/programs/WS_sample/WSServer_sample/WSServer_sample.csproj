@@ -42,7 +42,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>C:\Git2\ResourceServerTemplates2\dotnet\programs\OpenTouryoAssemblies\Build_net48\WSServer_sample.xml</DocumentationFile>
+    <DocumentationFile>..\..\OpenTouryoAssemblies\Build_net48\WSServer_sample.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
