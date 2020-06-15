@@ -10,8 +10,7 @@ setlocal
 set zipfilename=Temp.zip
 
 @rem GitHubのZIPパス
-set branchName=develop
-set srcUrl=https://github.com/OpenTouryoProject/OpenTouryoTemplates/archive/%branchName%.zip
+set srcUrl=https://github.com/OpenTouryoProject/OpenTouryo/archive/develop.zip
 
 @rem 解凍ディレクトリ
 set extDir=%CD%
@@ -35,21 +34,20 @@ if exist %extDir%\%tmpDir% GOTO Build
 
 :Build
 @rem ビルドがあるならコピーへ
-if exist "Temp\programs\CS\Frameworks\Infrastructure\Build_netcore30" GOTO Xcopy
-
-@rem パス長の問題を解決
-xcopy /Y /E "Temp\OpenTouryoTemplates-%branchName%\root_VS2019\programs" "Temp\programs\"
+if exist "Temp\OpenTouryo-develop\root\programs\CS\Frameworks\Infrastructure\Build_netcore30" GOTO Xcopy
 
 @rem batファイルを使用してビルド
-cd "Temp\programs\CS\"
+cd "Temp\OpenTouryo-develop\root\programs\CS\"
+echo | call 2_Build_NuGet_net48.bat
 echo | call 3_Build_Business_net48.bat
+echo | call 2_Build_NuGet_netstd21.bat
 echo | call 3_Build_Business_netcore30.bat
 
 :Xcopy
 @rem ビルド出力をコピー
 cd %extDir%
-xcopy /Y /E "Temp\programs\CS\Frameworks\Infrastructure\Build_net48" "OpenTouryoAssemblies\Build_net48\"
-xcopy /Y /E "Temp\programs\CS\Frameworks\Infrastructure\Build_netcore30" "OpenTouryoAssemblies\Build_netcore30\"
+xcopy /Y /E "Temp\OpenTouryo-develop\root\programs\CS\Frameworks\Infrastructure\Build_net48" "OpenTouryoAssemblies\Build_net48\"
+xcopy /Y /E "Temp\OpenTouryo-develop\root\programs\CS\Frameworks\Infrastructure\Build_netcore30" "OpenTouryoAssemblies\Build_netcore30\"
 
 pause
 
