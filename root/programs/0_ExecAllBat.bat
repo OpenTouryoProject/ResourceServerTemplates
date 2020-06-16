@@ -5,7 +5,7 @@ echo | call 1_DeleteFile.bat
 timeout 5
 
 rem echo | 3_BuildLibsAtOtherRepos.bat
-echo | 3_BuildLibsAtOtherReposInTimeOfDev.bat
+rem echo | 3_BuildLibsAtOtherReposInTimeOfDev.bat
 
 @echo on
 timeout 5
