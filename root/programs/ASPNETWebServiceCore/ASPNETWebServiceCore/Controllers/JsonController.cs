@@ -390,8 +390,8 @@ namespace ASPNETWebServiceCore.Controllers
                     param.ddlDap + "%" + param.ddlMode1 + "%" + param.ddlMode2 + "%" + param.ddlExRollback,
                     new MyUserInfo(userName, ipAddress));
 
-            testParameterValue.OrderColumn = param.orderColumn;
-            testParameterValue.OrderSequence = param.orderSequence;
+            testParameterValue.OrderColumn = param.OrderColumn;
+            testParameterValue.OrderSequence = param.OrderSequence;
 
             // 非同期呼び出し
             AsyncRetVal asyncRetVal = await this.Call("testInProcess", testParameterValue);
@@ -449,7 +449,7 @@ namespace ASPNETWebServiceCore.Controllers
                     param.ddlDap + "%" + param.ddlMode1 + "%" + param.ddlMode2 + "%" + param.ddlExRollback,
                     new MyUserInfo(userName, ipAddress));
 
-            testParameterValue.ShipperID = param.shipper.ShipperID;
+            testParameterValue.ShipperID = param.Shipper.ShipperID;
 
             // 非同期呼び出し
             AsyncRetVal asyncRetVal = await this.Call("testInProcess", testParameterValue);
@@ -511,8 +511,8 @@ namespace ASPNETWebServiceCore.Controllers
                     param.ddlDap + "%" + param.ddlMode1 + "%" + param.ddlMode2 + "%" + param.ddlExRollback,
                     new MyUserInfo(userName, ipAddress));
 
-            testParameterValue.CompanyName = param.shipper.CompanyName;
-            testParameterValue.Phone = param.shipper.Phone;
+            testParameterValue.CompanyName = param.Shipper.CompanyName;
+            testParameterValue.Phone = param.Shipper.Phone;
 
             // 非同期呼び出し
             AsyncRetVal asyncRetVal = await this.Call("testInProcess", testParameterValue);
@@ -570,9 +570,9 @@ namespace ASPNETWebServiceCore.Controllers
                     param.ddlDap + "%" + param.ddlMode1 + "%" + param.ddlMode2 + "%" + param.ddlExRollback,
                     new MyUserInfo(userName, ipAddress));
 
-            testParameterValue.ShipperID = param.shipper.ShipperID;
-            testParameterValue.CompanyName = param.shipper.CompanyName;
-            testParameterValue.Phone = param.shipper.Phone;
+            testParameterValue.ShipperID = param.Shipper.ShipperID;
+            testParameterValue.CompanyName = param.Shipper.CompanyName;
+            testParameterValue.Phone = param.Shipper.Phone;
 
             // 非同期呼び出し
             AsyncRetVal asyncRetVal = await this.Call("testInProcess", testParameterValue);
@@ -630,7 +630,7 @@ namespace ASPNETWebServiceCore.Controllers
                     param.ddlDap + "%" + param.ddlMode1 + "%" + param.ddlMode2 + "%" + param.ddlExRollback,
                     new MyUserInfo(userName, ipAddress));
 
-            testParameterValue.ShipperID = param.shipper.ShipperID;
+            testParameterValue.ShipperID = param.Shipper.ShipperID;
 
             // 非同期呼び出し
             AsyncRetVal asyncRetVal = await this.Call("testInProcess", testParameterValue);            

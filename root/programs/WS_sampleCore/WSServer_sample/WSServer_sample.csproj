@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\OpenTouryoAssemblies\Build_netcore50\</OutputPath>
-    <DocumentationFile>..\..\OpenTouryoAssemblies\Build_netcore50\net5.0\WSServer_sample.xml</DocumentationFile>
+    <OutputPath>..\..\OpenTouryoAssemblies\Build_netcore60\</OutputPath>
+    <DocumentationFile>..\..\OpenTouryoAssemblies\Build_netcore60\net6.0\WSServer_sample.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,13 +26,13 @@
 
   <ItemGroup>
     <Reference Include="OpenTouryo.Business">
-      <HintPath>..\..\OpenTouryoAssemblies\Build_netcore50\net5.0\OpenTouryo.Business.dll</HintPath>
+      <HintPath>..\..\OpenTouryoAssemblies\Build_netcore60\net6.0\OpenTouryo.Business.dll</HintPath>
     </Reference>
     <Reference Include="OpenTouryo.Framework">
-      <HintPath>..\..\OpenTouryoAssemblies\Build_netcore50\net5.0\OpenTouryo.Framework.dll</HintPath>
+      <HintPath>..\..\OpenTouryoAssemblies\Build_netcore60\net6.0\OpenTouryo.Framework.dll</HintPath>
     </Reference>
     <Reference Include="OpenTouryo.Public">
-      <HintPath>..\..\OpenTouryoAssemblies\Build_netcore50\net5.0\OpenTouryo.Public.dll</HintPath>
+      <HintPath>..\..\OpenTouryoAssemblies\Build_netcore60\net6.0\OpenTouryo.Public.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -18,7 +18,8 @@ call %CURRENT_DIR%z_Common.bat
 rem --------------------------------------------------
 rem Batch build of WSServer_sample.
 rem --------------------------------------------------
-%BUILDFILEPATH% %COMMANDLINE% /t:Restore "WS_sample\WSServer_sample\WSServer_sample.sln"
+..\nuget.exe restore "WS_sample\WSServer_sample\WSServer_sample.sln"
+%BUILDFILEPATH% %COMMANDLINE% "WS_sample\WSServer_sample\WSServer_sample.sln"
 
 pause
 

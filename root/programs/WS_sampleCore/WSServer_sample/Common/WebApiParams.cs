@@ -47,16 +47,16 @@ namespace WSServer_sample.Common
         /// <summary>
         /// 並び替え対象列
         /// </summary>
-        public string orderColumn { get; set; }
+        public string OrderColumn { get; set; }
 
         /// <summary>
         /// 降順・昇順
         /// </summary>
-        public string orderSequence { get; set; }
+        public string OrderSequence { get; set; }
 
         /// <summary>
         /// 荷主
         /// </summary>
-        public Shipper shipper { get; set; }
+        public Shipper Shipper { get; set; }
     }
 }
