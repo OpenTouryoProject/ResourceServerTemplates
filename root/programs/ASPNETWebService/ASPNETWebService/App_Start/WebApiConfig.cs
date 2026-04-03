@@ -33,9 +33,10 @@ namespace ASPNETWebService
             //config.SuppressDefaultHostAuthentication();
             //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
-            // JSON データにはDefaultを使用 (JSON.NET)
-            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver
-                = new CamelCasePropertyNamesContractResolver();
+            // JSON データをDefaultに使用 (JSON.NET)
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.Formatters.Insert(0, config.Formatters.JsonFormatter);
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             // CORS (Cross-Origin Resource Sharing)の有効化
             // 別ドメイン上で動作する Web アプリからアクセス可能に設定。

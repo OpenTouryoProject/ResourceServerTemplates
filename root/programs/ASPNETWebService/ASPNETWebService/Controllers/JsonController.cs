@@ -88,7 +88,6 @@ namespace ASPNETWebService.Controllers
         /// </summary>
         /// <returns>string</returns>
         [HttpGet]
-        [Route("test")]
         public string test()
         {
             return "test";
